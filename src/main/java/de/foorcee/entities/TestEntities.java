@@ -15,9 +15,9 @@ public class TestEntities extends JavaPlugin {
         Chunk chunk = world.getChunkAt(world.getSpawnLocation());
         System.out.println("Chunk loaded: " + chunk.isLoaded() + " entities: " + chunk.getEntities().length);
         String name = "ID: " + System.currentTimeMillis();
-        ArmorStand itemFrame = (ArmorStand) world.spawnEntity(world.getSpawnLocation(), EntityType.ARMOR_STAND);
-        itemFrame.setCustomName(name);
-        itemFrame.setCustomNameVisible(true);
+        ArmorStand armorStand = (ArmorStand) world.spawnEntity(world.getSpawnLocation(), EntityType.ARMOR_STAND);
+        armorStand.setCustomName(name);
+        armorStand.setCustomNameVisible(true);
 
         System.out.println("Chunk loaded: " + chunk.isLoaded() + " " + chunk.getEntities().length);
         boolean unloaded = chunk.unload();
